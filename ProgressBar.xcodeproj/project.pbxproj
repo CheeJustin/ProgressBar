@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC108C981AC0CE1600EBE120 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC108C971AC0CE1600EBE120 /* APIController.swift */; };
+		EC108C9A1AC0CF1F00EBE120 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC108C991AC0CF1E00EBE120 /* Event.swift */; };
 		ECF7950B1AC0B37E009E1F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7950A1AC0B37E009E1F42 /* AppDelegate.swift */; };
 		ECF7950D1AC0B37E009E1F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7950C1AC0B37E009E1F42 /* ViewController.swift */; };
 		ECF795101AC0B37E009E1F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF7950E1AC0B37E009E1F42 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC108C971AC0CE1600EBE120 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		EC108C991AC0CF1E00EBE120 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ECF795051AC0B37E009E1F42 /* ProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF795091AC0B37E009E1F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECF7950A1AC0B37E009E1F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				ECF7950A1AC0B37E009E1F42 /* AppDelegate.swift */,
+				EC108C971AC0CE1600EBE120 /* APIController.swift */,
 				ECF7950C1AC0B37E009E1F42 /* ViewController.swift */,
 				ECF7950E1AC0B37E009E1F42 /* Main.storyboard */,
 				ECF795111AC0B37E009E1F42 /* Images.xcassets */,
 				ECF795131AC0B37E009E1F42 /* LaunchScreen.xib */,
 				ECF795081AC0B37E009E1F42 /* Supporting Files */,
+				EC108C991AC0CF1E00EBE120 /* Event.swift */,
 			);
 			path = ProgressBar;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC108C9A1AC0CF1F00EBE120 /* Event.swift in Sources */,
 				ECF7950D1AC0B37E009E1F42 /* ViewController.swift in Sources */,
 				ECF7950B1AC0B37E009E1F42 /* AppDelegate.swift in Sources */,
+				EC108C981AC0CE1600EBE120 /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +415,7 @@
 				ECF795261AC0B37F009E1F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECF795271AC0B37F009E1F42 /* Build configuration list for PBXNativeTarget "ProgressBarTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +424,7 @@
 				ECF795291AC0B37F009E1F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

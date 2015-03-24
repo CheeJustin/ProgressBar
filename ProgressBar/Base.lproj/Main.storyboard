@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-H5-EWe">
+                                <rect key="frame" x="156" y="182" width="150" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6It-ZK-yqE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAn-7I-Pn4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-lO-0ah">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUD-9O-5YW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="179-Vc-ESu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="179-Vc-ESu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="179-Vc-ESu"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AUD-9O-5YW" firstAttribute="top" secondItem="aR9-H5-EWe" secondAttribute="bottom" constant="71" id="6B0-XJ-brE"/>
+                            <constraint firstItem="8w9-lO-0ah" firstAttribute="centerX" secondItem="aR9-H5-EWe" secondAttribute="centerX" id="6dF-0d-jJo"/>
+                            <constraint firstItem="8w9-lO-0ah" firstAttribute="top" secondItem="6It-ZK-yqE" secondAttribute="bottom" constant="38" id="6tf-3C-UGz"/>
+                            <constraint firstItem="aR9-H5-EWe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="A2M-UR-ava"/>
+                            <constraint firstItem="6It-ZK-yqE" firstAttribute="centerX" secondItem="8w9-lO-0ah" secondAttribute="centerX" id="AV7-R5-TBA"/>
+                            <constraint firstItem="6It-ZK-yqE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="AaB-VN-gFe"/>
+                            <constraint firstItem="aR9-H5-EWe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b9H-JB-2gv"/>
+                            <constraint firstItem="aR9-H5-EWe" firstAttribute="centerX" secondItem="AUD-9O-5YW" secondAttribute="centerX" id="sgr-G5-xzr"/>
+                            <constraint firstItem="aR9-H5-EWe" firstAttribute="top" secondItem="8w9-lO-0ah" secondAttribute="bottom" constant="22" id="xke-v6-oI9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6It-ZK-yqE"/>
+                                <exclude reference="8w9-lO-0ah"/>
+                                <exclude reference="AUD-9O-5YW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A2M-UR-ava"/>
+                                <exclude reference="b9H-JB-2gv"/>
+                                <exclude reference="sgr-G5-xzr"/>
+                                <exclude reference="xke-v6-oI9"/>
+                                <exclude reference="AV7-R5-TBA"/>
+                                <exclude reference="AaB-VN-gFe"/>
+                                <exclude reference="6dF-0d-jJo"/>
+                                <exclude reference="6tf-3C-UGz"/>
+                                <exclude reference="6B0-XJ-brE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6It-ZK-yqE"/>
+                                <include reference="8w9-lO-0ah"/>
+                                <include reference="AUD-9O-5YW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="A2M-UR-ava"/>
+                                <include reference="b9H-JB-2gv"/>
+                                <include reference="sgr-G5-xzr"/>
+                                <include reference="xke-v6-oI9"/>
+                                <include reference="AV7-R5-TBA"/>
+                                <include reference="AaB-VN-gFe"/>
+                                <include reference="6dF-0d-jJo"/>
+                                <include reference="6tf-3C-UGz"/>
+                                <include reference="6B0-XJ-brE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="dateInfo" destination="AUD-9O-5YW" id="cdV-DM-3M2"/>
+                        <outlet property="progressBar" destination="aR9-H5-EWe" id="7wx-eb-5gF"/>
+                        <outlet property="progressLabel" destination="8w9-lO-0ah" id="Qt3-ya-gae"/>
+                        <outlet property="startCount" destination="6It-ZK-yqE" id="MxV-bW-jhr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
